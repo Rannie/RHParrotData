@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D25F88E1A6A97E900866345 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D25F88D1A6A97E900866345 /* main.m */; };
+		4D25F8911A6A97E900866345 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D25F8901A6A97E900866345 /* AppDelegate.m */; };
+		4D25F8941A6A97E900866345 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D25F8931A6A97E900866345 /* ViewController.m */; };
+		4D25F8971A6A97E900866345 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D25F8951A6A97E900866345 /* Main.storyboard */; };
+		4D25F8991A6A97E900866345 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D25F8981A6A97E900866345 /* Images.xcassets */; };
+		4D25F89C1A6A97E900866345 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D25F89A1A6A97E900866345 /* LaunchScreen.xib */; };
+		4D25F8A81A6A97E900866345 /* RHParrotDataDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D25F8A71A6A97E900866345 /* RHParrotDataDemoTests.m */; };
+		4D25F8B41A6A982B00866345 /* RHQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D25F8B31A6A982B00866345 /* RHQuery.m */; };
+		4D25F8B71A6A986400866345 /* RHDataAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D25F8B61A6A986400866345 /* RHDataAgent.m */; };
+		4D25F8BA1A6A987700866345 /* RHDataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D25F8B91A6A987700866345 /* RHDataImporter.m */; };
+		4D865D161A6D3AFB005FA54C /* RHDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D865D151A6D3AFB005FA54C /* RHDatabaseManager.m */; };
+		4D90F6891A6E4B8900471EDE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D90F6871A6E4B8900471EDE /* Model.xcdatamodeld */; };
+		4D90F68C1A6E4C7F00471EDE /* Brand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D90F68B1A6E4C7F00471EDE /* Brand.m */; };
+		4D90F68F1A6E4C7F00471EDE /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D90F68E1A6E4C7F00471EDE /* Person.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D25F8A21A6A97E900866345 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D25F8801A6A97E900866345 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D25F8871A6A97E900866345;
+			remoteInfo = RHParrotDataDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4D25F8881A6A97E900866345 /* RHParrotDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RHParrotDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D25F88C1A6A97E900866345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D25F88D1A6A97E900866345 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4D25F88F1A6A97E900866345 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4D25F8901A6A97E900866345 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4D25F8921A6A97E900866345 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4D25F8931A6A97E900866345 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4D25F8961A6A97E900866345 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D25F8981A6A97E900866345 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4D25F89B1A6A97E900866345 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4D25F8A11A6A97E900866345 /* RHParrotDataDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RHParrotDataDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D25F8A61A6A97E900866345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D25F8A71A6A97E900866345 /* RHParrotDataDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHParrotDataDemoTests.m; sourceTree = "<group>"; };
+		4D25F8B21A6A982B00866345 /* RHQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHQuery.h; sourceTree = "<group>"; };
+		4D25F8B31A6A982B00866345 /* RHQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHQuery.m; sourceTree = "<group>"; };
+		4D25F8B51A6A986400866345 /* RHDataAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHDataAgent.h; sourceTree = "<group>"; };
+		4D25F8B61A6A986400866345 /* RHDataAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHDataAgent.m; sourceTree = "<group>"; };
+		4D25F8B81A6A987700866345 /* RHDataImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHDataImporter.h; sourceTree = "<group>"; };
+		4D25F8B91A6A987700866345 /* RHDataImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHDataImporter.m; sourceTree = "<group>"; };
+		4D25F8BF1A6AA65700866345 /* RHParrotMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHParrotMacro.h; sourceTree = "<group>"; };
+		4D6AB83E1A6D0C6100EC0174 /* RHParrotData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHParrotData.h; sourceTree = "<group>"; };
+		4D865D141A6D3AFB005FA54C /* RHDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHDatabaseManager.h; sourceTree = "<group>"; };
+		4D865D151A6D3AFB005FA54C /* RHDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHDatabaseManager.m; sourceTree = "<group>"; };
+		4D90F6881A6E4B8900471EDE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		4D90F68A1A6E4C7F00471EDE /* Brand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Brand.h; sourceTree = "<group>"; };
+		4D90F68B1A6E4C7F00471EDE /* Brand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Brand.m; sourceTree = "<group>"; };
+		4D90F68D1A6E4C7F00471EDE /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		4D90F68E1A6E4C7F00471EDE /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D25F8851A6A97E900866345 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D25F89E1A6A97E900866345 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D25F87F1A6A97E900866345 = {
+			isa = PBXGroup;
+			children = (
+				4D25F88A1A6A97E900866345 /* RHParrotDataDemo */,
+				4D25F8A41A6A97E900866345 /* RHParrotDataDemoTests */,
+				4D25F8891A6A97E900866345 /* Products */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+		};
+		4D25F8891A6A97E900866345 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D25F8881A6A97E900866345 /* RHParrotDataDemo.app */,
+				4D25F8A11A6A97E900866345 /* RHParrotDataDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D25F88A1A6A97E900866345 /* RHParrotDataDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4D25F8B11A6A980300866345 /* RHParrotData */,
+				4D25F88F1A6A97E900866345 /* AppDelegate.h */,
+				4D25F8901A6A97E900866345 /* AppDelegate.m */,
+				4D25F8921A6A97E900866345 /* ViewController.h */,
+				4D25F8931A6A97E900866345 /* ViewController.m */,
+				4D90F68D1A6E4C7F00471EDE /* Person.h */,
+				4D90F68E1A6E4C7F00471EDE /* Person.m */,
+				4D90F68A1A6E4C7F00471EDE /* Brand.h */,
+				4D90F68B1A6E4C7F00471EDE /* Brand.m */,
+				4D90F6871A6E4B8900471EDE /* Model.xcdatamodeld */,
+				4D25F8951A6A97E900866345 /* Main.storyboard */,
+				4D25F8981A6A97E900866345 /* Images.xcassets */,
+				4D25F89A1A6A97E900866345 /* LaunchScreen.xib */,
+				4D25F88B1A6A97E900866345 /* Supporting Files */,
+			);
+			path = RHParrotDataDemo;
+			sourceTree = "<group>";
+		};
+		4D25F88B1A6A97E900866345 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D25F88C1A6A97E900866345 /* Info.plist */,
+				4D25F88D1A6A97E900866345 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4D25F8A41A6A97E900866345 /* RHParrotDataDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D25F8A71A6A97E900866345 /* RHParrotDataDemoTests.m */,
+				4D25F8A51A6A97E900866345 /* Supporting Files */,
+			);
+			path = RHParrotDataDemoTests;
+			sourceTree = "<group>";
+		};
+		4D25F8A51A6A97E900866345 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D25F8A61A6A97E900866345 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4D25F8B11A6A980300866345 /* RHParrotData */ = {
+			isa = PBXGroup;
+			children = (
+				4D6AB83E1A6D0C6100EC0174 /* RHParrotData.h */,
+				4D25F8BF1A6AA65700866345 /* RHParrotMacro.h */,
+				4D25F8B21A6A982B00866345 /* RHQuery.h */,
+				4D25F8B31A6A982B00866345 /* RHQuery.m */,
+				4D25F8B51A6A986400866345 /* RHDataAgent.h */,
+				4D25F8B61A6A986400866345 /* RHDataAgent.m */,
+				4D25F8B81A6A987700866345 /* RHDataImporter.h */,
+				4D25F8B91A6A987700866345 /* RHDataImporter.m */,
+				4D865D141A6D3AFB005FA54C /* RHDatabaseManager.h */,
+				4D865D151A6D3AFB005FA54C /* RHDatabaseManager.m */,
+			);
+			path = RHParrotData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D25F8871A6A97E900866345 /* RHParrotDataDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D25F8AB1A6A97E900866345 /* Build configuration list for PBXNativeTarget "RHParrotDataDemo" */;
+			buildPhases = (
+				4D25F8841A6A97E900866345 /* Sources */,
+				4D25F8851A6A97E900866345 /* Frameworks */,
+				4D25F8861A6A97E900866345 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RHParrotDataDemo;
+			productName = RHParrotDataDemo;
+			productReference = 4D25F8881A6A97E900866345 /* RHParrotDataDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4D25F8A01A6A97E900866345 /* RHParrotDataDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D25F8AE1A6A97E900866345 /* Build configuration list for PBXNativeTarget "RHParrotDataDemoTests" */;
+			buildPhases = (
+				4D25F89D1A6A97E900866345 /* Sources */,
+				4D25F89E1A6A97E900866345 /* Frameworks */,
+				4D25F89F1A6A97E900866345 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D25F8A31A6A97E900866345 /* PBXTargetDependency */,
+			);
+			name = RHParrotDataDemoTests;
+			productName = RHParrotDataDemoTests;
+			productReference = 4D25F8A11A6A97E900866345 /* RHParrotDataDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D25F8801A6A97E900866345 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = ran;
+				TargetAttributes = {
+					4D25F8871A6A97E900866345 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					4D25F8A01A6A97E900866345 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 4D25F8871A6A97E900866345;
+					};
+				};
+			};
+			buildConfigurationList = 4D25F8831A6A97E900866345 /* Build configuration list for PBXProject "RHParrotDataDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D25F87F1A6A97E900866345;
+			productRefGroup = 4D25F8891A6A97E900866345 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D25F8871A6A97E900866345 /* RHParrotDataDemo */,
+				4D25F8A01A6A97E900866345 /* RHParrotDataDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D25F8861A6A97E900866345 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D25F8971A6A97E900866345 /* Main.storyboard in Resources */,
+				4D25F89C1A6A97E900866345 /* LaunchScreen.xib in Resources */,
+				4D25F8991A6A97E900866345 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D25F89F1A6A97E900866345 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D25F8841A6A97E900866345 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D90F68C1A6E4C7F00471EDE /* Brand.m in Sources */,
+				4D25F8B41A6A982B00866345 /* RHQuery.m in Sources */,
+				4D90F68F1A6E4C7F00471EDE /* Person.m in Sources */,
+				4D25F8941A6A97E900866345 /* ViewController.m in Sources */,
+				4D25F8911A6A97E900866345 /* AppDelegate.m in Sources */,
+				4D90F6891A6E4B8900471EDE /* Model.xcdatamodeld in Sources */,
+				4D25F8BA1A6A987700866345 /* RHDataImporter.m in Sources */,
+				4D25F8B71A6A986400866345 /* RHDataAgent.m in Sources */,
+				4D865D161A6D3AFB005FA54C /* RHDatabaseManager.m in Sources */,
+				4D25F88E1A6A97E900866345 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D25F89D1A6A97E900866345 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D25F8A81A6A97E900866345 /* RHParrotDataDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D25F8A31A6A97E900866345 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D25F8871A6A97E900866345 /* RHParrotDataDemo */;
+			targetProxy = 4D25F8A21A6A97E900866345 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4D25F8951A6A97E900866345 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D25F8961A6A97E900866345 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4D25F89A1A6A97E900866345 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D25F89B1A6A97E900866345 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D25F8A91A6A97E900866345 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4D25F8AA1A6A97E900866345 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D25F8AC1A6A97E900866345 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RHParrotDataDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4D25F8AD1A6A97E900866345 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RHParrotDataDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4D25F8AF1A6A97E900866345 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RHParrotDataDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RHParrotDataDemo.app/RHParrotDataDemo";
+			};
+			name = Debug;
+		};
+		4D25F8B01A6A97E900866345 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RHParrotDataDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RHParrotDataDemo.app/RHParrotDataDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D25F8831A6A97E900866345 /* Build configuration list for PBXProject "RHParrotDataDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D25F8A91A6A97E900866345 /* Debug */,
+				4D25F8AA1A6A97E900866345 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D25F8AB1A6A97E900866345 /* Build configuration list for PBXNativeTarget "RHParrotDataDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D25F8AC1A6A97E900866345 /* Debug */,
+				4D25F8AD1A6A97E900866345 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D25F8AE1A6A97E900866345 /* Build configuration list for PBXNativeTarget "RHParrotDataDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D25F8AF1A6A97E900866345 /* Debug */,
+				4D25F8B01A6A97E900866345 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4D90F6871A6E4B8900471EDE /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4D90F6881A6E4B8900471EDE /* Model.xcdatamodel */,
+			);
+			currentVersion = 4D90F6881A6E4B8900471EDE /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4D25F8801A6A97E900866345 /* Project object */;
+}
