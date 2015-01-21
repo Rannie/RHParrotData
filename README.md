@@ -1,7 +1,6 @@
 # RHParrotData
 CoreData management lib and quick query language. 
 
----
 
 ###Usage
 ---
@@ -9,9 +8,9 @@ CoreData management lib and quick query language.
 
 ###TODO
 ---
-- [] Podspec file
-- [] Log util
-- [] Swift version
+- [ ] Podspec file
+- [ ] Log util
+- [ ] Swift version
 
 ###LICENSE
 ---
