@@ -10,7 +10,6 @@
 #import "RHParrotData.h"
 #import "Person.h"
 #import "Brand.h"
-#import "RHDataImporter.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) RHDataAgent *dataAgent;

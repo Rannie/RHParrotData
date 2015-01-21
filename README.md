@@ -5,12 +5,24 @@ CoreData management lib and quick query language.
 ###Usage
 ---
 
+####Install
+
+Drag "RHParrotData" folder into your project, and import "RHParrotData.h".
+
+####Setup Database
+
+	  NSURL *momdURL = [[NSBundle mainBundle] URLForResource:$YOUR_MOMDFILENAME withExtension:@"momd"];
+	  NSURL *appDocumentsDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+	  NSURL *storeURL = [appDocumentsDirectory URLByAppendingPathComponent:$YOUR_DBNAME];
+	  [RHDataAgent setupAgentWithMomdFile:momdURL andStoreURL:storeURL];
+	  
+
 
 ###TODO
 ---
-- [ ] Podspec file
-- [ ] Log util
-- [ ] Swift version
+- [ ] Podspec File
+- [ ] Log Util
+- [ ] Swift Version
 
 ###LICENSE
 ---
