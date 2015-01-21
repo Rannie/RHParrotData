@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "RHParrotMacro.h"
 
-typedef void (^RHObjectSeralizeHandler)(id oriObj, NSManagedObject *dataObj);
+typedef void (^RHObjectSerializeHandler)(id oriObj, NSManagedObject *dataObj);
 
 @interface RHDataImporter : NSObject
 
@@ -18,7 +18,7 @@ typedef void (^RHObjectSeralizeHandler)(id oriObj, NSManagedObject *dataObj);
 - (void)importEntity:(NSString *)entity
           primaryKey:(NSString *)primaryKey
                 data:(NSArray *)data
-       insertHandler:(RHObjectSeralizeHandler)insertHandler
-       updateHandler:(RHObjectSeralizeHandler)updateHandler;
+       insertHandler:(RHObjectSerializeHandler)insertHandler
+       updateHandler:(RHObjectSerializeHandler)updateHandler;
 
 @end

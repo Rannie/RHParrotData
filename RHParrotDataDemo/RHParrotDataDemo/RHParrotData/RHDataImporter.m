@@ -19,7 +19,7 @@
   return self;
 }
 
-- (void)importEntity:(NSString *)entity primaryKey:(NSString *)primaryKey data:(NSArray *)data insertHandler:(RHObjectSeralizeHandler)insertHandler updateHandler:(RHObjectSeralizeHandler)updateHandler {
+- (void)importEntity:(NSString *)entity primaryKey:(NSString *)primaryKey data:(NSArray *)data insertHandler:(RHObjectSerializeHandler)insertHandler updateHandler:(RHObjectSerializeHandler)updateHandler {
   NSParameterAssert(entity);
   
   __block NSUInteger count = 0;

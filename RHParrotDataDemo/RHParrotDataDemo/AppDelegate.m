@@ -27,8 +27,8 @@
 //  [self insertCase];
 //  [self deleteCase];
 //  [self updateCase];
-//  [self queryCase];
-  [self importCase];
+  [self queryCase];
+//  [self importCase];
   
   return YES;
 }
@@ -72,6 +72,11 @@
   RHQuery *queryStart = [query same];
   [queryStart queryKey:@"name" op:BeginsWith value:@"H"];
   result = [queryStart excute];
+  
+  NSLog(@"result : %@", result);
+  
+  RHQuery *orQuery = [queryStart OR:query];
+  result = [orQuery excute];
   
   NSLog(@"result : %@", result);
 }
