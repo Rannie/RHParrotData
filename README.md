@@ -31,7 +31,7 @@ Then u can retrieve the instance of RHDataAgent by class method '*agent*'.
 
 ```objc
 RHQuery *query = [RHQuery queryWithEntity:@"Person"];
-[query queryKey:@"name" op:Equal value:@"Kobe"];
+[query queryKey:@"name" op:RHEqual value:@"Kobe"];
 id result = [query excute];
 ```
 
@@ -51,7 +51,7 @@ Age will sort descending.
 
 ```objc
 RHQuery *queryAverageAge = [query same];
-[queryAverageAge queryKey:@"age" withFunction:Average];
+[queryAverageAge queryKey:@"age" withFunction:RHAverage];
 id result = [queryAverageAge excute];
 ```
 
@@ -139,37 +139,31 @@ Reduce memory:
 
 | **Operator Enum**   | **Comparison**   |  **Example**               |
 |---------------------|------------------|--------------------------  |
-| Equal 			  | == 				  | "name == Hanran"           |
-| GreaterThan 		  | > 				  | "age > 20"                 |
-| LessThan 		  	  | < 				  | "age < 40"                 |
-| GreaterOrEqual      | >= 				  | "price >= 100"             |
-| LessOrEqual         | <= 				  | "price <= 1000"            |
-| Not                 | != 				  | "sex != female"            |
-| Between             | < lhs < 	      | "price IN 100, 1000"       |
-| BeginsWith         | lhs start with rhs| "Terry BEGINSWITH T"       |
-| EndsWith           | lhs end with rhs  | "Terry ENDSWITH y"         |
-| Contains           | lhs contains rhs  | "Terry CONTAINS rr"        |
-| Like               | lhs like rhs      | "name LIKE[c] next"        |
-| Matches            | lhs matches rhs   | "name MATCHES ^A.+e$". [Regular Expressions][1]      |
-| In                 | lhs in rhs        | "name IN Ben, Melissa, Nick"|
+| RHEqual 			  | == 				  | "name == Hanran"           |
+| RHGreaterThan 		  | > 				  | "age > 20"                 |
+| RHLessThan 		  	  | < 				  | "age < 40"                 |
+| RHGreaterOrEqual      | >= 				  | "price >= 100"             |
+| RHLessOrEqual         | <= 				  | "price <= 1000"            |
+| RHNot                 | != 				  | "sex != female"            |
+| RHBetween             | < lhs < 	      | "price IN 100, 1000"       |
+| RHBeginsWith         | lhs start with rhs| "Terry BEGINSWITH T"       |
+| RHEndsWith           | lhs end with rhs  | "Terry ENDSWITH y"         |
+| RHContains           | lhs contains rhs  | "Terry CONTAINS rr"        |
+| RHLike               | lhs like rhs      | "name LIKE[c] next"        |
+| RHMatches            | lhs matches rhs   | "name MATCHES ^A.+e$". [Regular Expressions][1]      |
+| RHIn                 | lhs in rhs        | "name IN Ben, Melissa, Nick"|
 
 
 ###Query Functions
 ---
-
-  Max = 0,
-  Min,
-  Average,
-  Sum,
-  Count
   
 | **Function Enum** | **Meaning**  |
 |-------------------|--------------|
-| Max				| max number of the column |
-| Min			    | min number of the column |
-| Average			| average number			|
-| Sum				| sum number				|
-| Count				| row count 				|
+| RHMax				| max number of the column |
+| RHMin			    | min number of the column |
+| RHAverage			| average number			|
+| RHSum				| sum number				|
+| RHCount		    | row count 				|
 
 
 ###TODO
