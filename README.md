@@ -173,6 +173,7 @@ Reduce memory:
 - [ ] NSFetchResultController
 - [ ] Log Util
 - [ ] Swift Version
+- [ ] Test
 - [ ] Complete Example
 - [ ] FMDB Version
 - [ ] Base ManagedObject (Serialization)
