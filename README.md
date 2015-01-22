@@ -145,11 +145,11 @@ Reduce memory:
 | GreaterOrEqual      | >= 				  | "price >= 100"             |
 | LessOrEqual         | <= 				  | "price <= 1000"            |
 | Not                 | != 				  | "sex != female"            |
-| Between             | < lhs < 	      | "100 < price < 1000"       |
+| Between             | < lhs < 	      | "price IN 100, 1000"       |
 | BeginsWith         | lhs start with rhs| "Terry BEGINSWITH T"       |
 | EndsWith           | lhs end with rhs  | "Terry ENDSWITH y"         |
 | Contains           | lhs contains rhs  | "Terry CONTAINS rr"        |
-| Like               | lhs like rhs      | "name like[c] next"        |
+| Like               | lhs like rhs      | "name LIKE[c] next"        |
 | Matches            | lhs matches rhs   | "name MATCHES ^A.+e$". [Regular Expressions][1]      |
 | In                 | lhs in rhs        | "name IN Ben, Melissa, Nick"|
 
