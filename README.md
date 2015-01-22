@@ -16,10 +16,10 @@ Drag "RHParrotData" folder into your project, and import "RHParrotData.h".
 ####Setup Database
 
 ```objc
-	  NSURL *momdURL = [[NSBundle mainBundle] URLForResource:$YOUR_MOMDFILENAME withExtension:@"momd"];
-	  NSURL *appDocumentsDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-	  NSURL *storeURL = [appDocumentsDirectory URLByAppendingPathComponent:$YOUR_DBNAME];
-	  [RHDataAgent setupAgentWithMomdFile:momdURL andStoreURL:storeURL];
+NSURL *momdURL = [[NSBundle mainBundle] URLForResource:$YOUR_MOMDFILENAME withExtension:@"momd"];
+NSURL *appDocumentsDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+NSURL *storeURL = [appDocumentsDirectory URLByAppendingPathComponent:$YOUR_DBNAME];
+[RHDataAgent setupAgentWithMomdFile:momdURL andStoreURL:storeURL];
 ```
 	  
 Then u can retrieve the instance of RHDataAgent by class method '*agent*'.
