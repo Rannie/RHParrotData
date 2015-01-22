@@ -121,13 +121,13 @@ static NSString * RHFunctionExpression(RHFunction func) {
   if (op == RHNone) { return; }
   if (op == RHIn) {
     if (![value isKindOfClass:NSArray.class]) {
-      RLog(@"RHQuery: In value should be a list, if only one value, should use 'Equal'.");
+      RLog(@"RHQuery: In value should be a list, if only one value, should use 'RHEqual'.");
       return;
     }
   }
   
   if (self.isCompound) {
-    RLog(@"RHQuery: Query is compound. If want to add a condition, can use 'queryAnd:' method!");
+    RLog(@"RHQuery: Query is compound. If want to add a condition, can use 'AND:' method!");
     return;
   }
   
@@ -196,7 +196,7 @@ static NSString * RHFunctionExpression(RHFunction func) {
 
 #pragma mark - Other
 - (NSString *)description {
-  return [NSString stringWithFormat:@"<RHQuery: %p entity: %@>", self, self.entity];
+  return [NSString stringWithFormat:@"<RHQuery: %p entity: %@ predicate: %@>", self, self.entity, self.queryPredicate.predicateFormat];
 }
 
 @end

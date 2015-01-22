@@ -28,7 +28,7 @@
 //  [self deleteCase];
 //  [self updateCase];
 //  [self queryCase];
-//  [self importCase];
+  [self importCase];
   
   return YES;
 }
