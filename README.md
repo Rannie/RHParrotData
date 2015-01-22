@@ -169,7 +169,7 @@ Reduce memory:
 ###TODO
 ---
 - [ ] Podspec File
-- [ ] Document
+- [x] Document
 - [ ] Log Util
 - [ ] Swift Version
 - [ ] Base ManagedObject (Serialization)
