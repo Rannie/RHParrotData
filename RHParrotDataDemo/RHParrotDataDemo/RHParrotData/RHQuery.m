@@ -32,7 +32,7 @@ static NSString * RHOperatorText(RHOperator op) {
     case Contains:
       return @"CONTAINS";
     case Like:
-      return @"LIKE";
+      return @"LIKE[cd]";
     case Matches:
       return @"MATCHES";
     case In:

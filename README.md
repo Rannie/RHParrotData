@@ -29,25 +29,31 @@ Then u can retrieve the instance of RHDataAgent by class method '*agent*'.
 
 #####Simple Operator Query:
 
-	RHQuery *query = [RHQuery queryWithEntity:@"Person"];
-	[query queryKey:@"name" op:Equal value:@"Kobe"];
-	id result = [query excute];
+```objc
+RHQuery *query = [RHQuery queryWithEntity:@"Person"];
+[query queryKey:@"name" op:Equal value:@"Kobe"];
+id result = [query excute];
+```
 
 Result will be a name == "Kobe" person array.
 
 #####Query and Sort:
 
-	RHQuery *sortQuery = [RHQuery queryWithEntity:@"Person"];
-	[sortQuery sort:@"age" ascending:NO];
-	id result = [sortQuery excute];
+```objc
+RHQuery *sortQuery = [RHQuery queryWithEntity:@"Person"];
+[sortQuery sort:@"age" ascending:NO];
+id result = [sortQuery excute];
+```
 	
 Age will sort descending.
 
 #####Query with Function
 
-	RHQuery *queryAverageAge = [query same];
-	[queryAverageAge queryKey:@"age" withFunction:Average];
-	id result = [queryAverageAge excute];
+```objc
+RHQuery *queryAverageAge = [query same];
+[queryAverageAge queryKey:@"age" withFunction:Average];
+id result = [queryAverageAge excute];
+```
 
 *same* means query same entity.
 Result will be the average number about age;
@@ -56,14 +62,18 @@ Result will be the average number about age;
 
 **RHQuery** also support compound query.
 
-	- (RHQuery *)OR:(RHQuery *)anoQuery;
-	- (RHQuery *)AND:(RHQuery *)anoQuery;
-	- (RHQuery *)NOT;
+```objc
+- (RHQuery *)OR:(RHQuery *)anoQuery;
+- (RHQuery *)AND:(RHQuery *)anoQuery;
+- (RHQuery *)NOT;
+```
 
 Sample:
 	
-	RHQuery *orQuery = [queryStart OR:query];	//"name == Kobe" query above
-	id result = [orQuery excute];
+```objc
+RHQuery *orQuery = [queryStart OR:query];	//"name == Kobe" query above
+id result = [orQuery excute];
+```
 
 Result will be a list contains "$QUERY_START_CONDITION" or "name == Kobe" objects.
 
@@ -71,11 +81,13 @@ Result will be a list contains "$QUERY_START_CONDITION" or "name == Kobe" object
 
 Need new a RHDataImportor instance, and use:
 
-	- (void)importEntity:(NSString *)entity
-          primaryKey:(NSString *)primaryKey
-                data:(NSArray *)data
-       insertHandler:(RHObjectSerializeHandler)insertHandler
-       updateHandler:(RHObjectSerializeHandler)updateHandler;
+```objc
+- (void)importEntity:(NSString *)entity
+         primaryKey:(NSString *)primaryKey
+               data:(NSArray *)data
+      insertHandler:(RHObjectSerializeHandler)insertHandler
+      updateHandler:(RHObjectSerializeHandler)updateHandler;
+```
 
 It will import data in a background managedObjectContext and merge changes to the main managedObjectContext.
 
@@ -90,37 +102,80 @@ Agent is a singleton. It's Features:
 
 Insert and update:
 
-	[[RHDataAgent agent] commit];
+```objc
+[[RHDataAgent agent] commit];
+```
 	
 Delete object or objects:
 	
-	[[RHDataAgent agent] deleteObject:objToDelete];
-	[[RHDataAgent agent] deleteObjects:(NSArray *)objsToDelete];
+```objc
+[[RHDataAgent agent] deleteObject:objToDelete];
+[[RHDataAgent agent] deleteObjects:(NSArray *)objsToDelete];
+```
 	
 Excute RHQuery:
 
-	[[RHDataAgent agent] excuteQuery:query];
+```objc
+[[RHDataAgent agent] excuteQuery:query];
+```
 
 Undo management:
 
-	- (void)undo;
-	- (void)redo;
-	- (void)rollback;
-	- (void)reset;
+```objc
+- (void)undo;
+- (void)redo;
+- (void)rollback;
+- (void)reset;
+```
 
 Reduce memory:
 
-	- (void)reduceMemory;
+```objc
+- (void)reduceMemory;
+```
 	
 ###Query Operators
 ---
 
+| **Operator Enum**   | **Comparison**   |  **Example**               |
+|---------------------|------------------|--------------------------  |
+| Equal 			  | == 				  | "name == Hanran"           |
+| GreaterThan 		  | > 				  | "age > 20"                 |
+| LessThan 		  	  | < 				  | "age < 40"                 |
+| GreaterOrEqual      | >= 				  | "price >= 100"             |
+| LessOrEqual         | <= 				  | "price <= 1000"            |
+| Not                 | != 				  | "sex != female"            |
+| Between             | < lhs < 	      | "100 < price < 1000"       |
+| BeginsWith         | lhs start with rhs| "Terry BEGINSWITH T"       |
+| EndsWith           | lhs end with rhs  | "Terry ENDSWITH y"         |
+| Contains           | lhs contains rhs  | "Terry CONTAINS rr"        |
+| Like               | lhs like rhs      | "name like[c] next"        |
+| Matches            | lhs matches rhs   | "name MATCHES ^A.+e$". [Regular Expressions][1]      |
+| In                 | lhs in rhs        | "name IN Ben, Melissa, Nick"|
+
+
 ###Query Functions
 ---
+
+  Max = 0,
+  Min,
+  Average,
+  Sum,
+  Count
+  
+| **Function Enum** | **Meaning**  |
+|-------------------|--------------|
+| Max				| max number of the column |
+| Min			    | min number of the column |
+| Average			| average number			|
+| Sum				| sum number				|
+| Count				| row count 				|
+
 
 ###TODO
 ---
 - [ ] Podspec File
+- [ ] Document
 - [ ] Log Util
 - [ ] Swift Version
 - [ ] Base ManagedObject (Serialization)
@@ -149,3 +204,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+
+[1]:http://userguide.icu-project.org/strings/regexp
