@@ -13,6 +13,10 @@ typedef void (^DBOperationSuccessBlock)();
 typedef void (^DBQuerySuccessBlock)(id result);
 typedef void (^DBOperationFailureBlock)(NSError *error);
 
+/**
+ *  The CoreData stack class.
+ *  Operate database directly.
+ */
 @interface RHDatabaseManager : NSObject
 
 @property (nonatomic, strong) NSURL *momdURL;
