@@ -11,31 +11,31 @@
 
 static NSString * RHOperatorText(RHOperator op) {
   switch (op) {
-    case Equal:
+    case RHEqual:
       return @"=";
-    case GreaterThan:
+    case RHGreaterThan:
       return @">";
-    case LessThan:
+    case RHLessThan:
       return @"<";
-    case GreaterOrEqual:
+    case RHGreaterOrEqual:
       return @">=";
-    case LessOrEqual:
+    case RHLessOrEqual:
       return @"<=";
-    case Not:
+    case RHNot:
       return @"!=";
-    case Between:
+    case RHBetween:
       return @"BETWEEN";
-    case BeginsWith:
+    case RHBeginsWith:
       return @"BEGINSWITH";
-    case EndsWith:
+    case RHEndsWith:
       return @"ENDSWITH";
-    case Contains:
+    case RHContains:
       return @"CONTAINS";
-    case Like:
+    case RHLike:
       return @"LIKE[cd]";
-    case Matches:
+    case RHMatches:
       return @"MATCHES";
-    case In:
+    case RHIn:
       return @"IN";
     default:
       RLog(@"RHQuery: Unknown operator!");
@@ -46,15 +46,15 @@ static NSString * RHOperatorText(RHOperator op) {
 
 static NSString * RHFunctionExpression(RHFunction func) {
   switch (func) {
-    case Max:
+    case RHMax:
       return @"max:";
-    case Min:
+    case RHMin:
       return @"min:";
-    case Count:
+    case RHCount:
       return @"count:";
-    case Sum:
+    case RHSum:
       return @"sum:";
-    case Average:
+    case RHAverage:
       return @"average:";
     default:
       RLog(@"RHQuery: Unknown function!");
@@ -118,8 +118,8 @@ static NSString * RHFunctionExpression(RHFunction func) {
   NSParameterAssert(key);
   NSParameterAssert(value);
   
-  if (op == None) { return; }
-  if (op == In) {
+  if (op == RHNone) { return; }
+  if (op == RHIn) {
     if (![value isKindOfClass:NSArray.class]) {
       RLog(@"RHQuery: In value should be a list, if only one value, should use 'Equal'.");
       return;

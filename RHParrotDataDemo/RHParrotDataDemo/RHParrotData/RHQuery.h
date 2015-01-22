@@ -10,28 +10,28 @@
 #import "RHParrotMacro.h"
 
 typedef NS_ENUM(NSInteger, RHOperator) {
-  None = 0,
-  Equal,
-  GreaterThan,
-  LessThan,
-  GreaterOrEqual,
-  LessOrEqual,
-  Not,
-  Between,
-  BeginsWith,
-  EndsWith,
-  Contains,
-  Like,
-  Matches,
-  In
+  RHNone = 0,
+  RHEqual,
+  RHGreaterThan,
+  RHLessThan,
+  RHGreaterOrEqual,
+  RHLessOrEqual,
+  RHNot,
+  RHBetween,
+  RHBeginsWith,
+  RHEndsWith,
+  RHContains,
+  RHLike,
+  RHMatches,
+  RHIn
 };
 
 typedef NS_ENUM(NSInteger, RHFunction) {
-  Max = 0,
-  Min,
-  Average,
-  Sum,
-  Count
+  RHMax = 0,
+  RHMin,
+  RHAverage,
+  RHSum,
+  RHCount
 };
 
 @interface RHQuery : NSObject <NSCopying>

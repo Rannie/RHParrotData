@@ -31,7 +31,7 @@
       if (primaryKey != nil) {
         id primaryValue = [obj valueForKey:primaryKey];
         RHQuery *query = [RHQuery queryWithEntity:entity];
-        [query queryKey:primaryKey op:Equal value:primaryValue];
+        [query queryKey:primaryKey op:RHEqual value:primaryValue];
         managedObj = [[query excute] firstObject];
       }
       

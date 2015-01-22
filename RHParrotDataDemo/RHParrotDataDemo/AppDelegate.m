@@ -27,7 +27,7 @@
 //  [self insertCase];
 //  [self deleteCase];
 //  [self updateCase];
-  [self queryCase];
+//  [self queryCase];
 //  [self importCase];
   
   return YES;
@@ -45,7 +45,7 @@
   id result;
   
   RHQuery *query = [RHQuery queryWithEntity:@"Person"];
-  [query queryKey:@"name" op:Equal value:@"Kobe"];
+  [query queryKey:@"name" op:RHEqual value:@"Kobe"];
   result = [query excute];
   
   NSLog(@"result : %@", result);
@@ -58,19 +58,19 @@
   }];
   
   RHQuery *queryAverageAge = [query same];
-  [queryAverageAge queryKey:@"age" withFunction:Average];
+  [queryAverageAge queryKey:@"age" withFunction:RHAverage];
   result = [queryAverageAge excute];
   
   NSLog(@"result : %@", result);
   
   RHQuery *queryMin = [query same];
-  [queryMin queryKey:@"age" withFunction:Min];
+  [queryMin queryKey:@"age" withFunction:RHMin];
   result = [queryMin excute];
   
   NSLog(@"result : %@", result);
   
   RHQuery *queryStart = [query same];
-  [queryStart queryKey:@"name" op:BeginsWith value:@"H"];
+  [queryStart queryKey:@"name" op:RHBeginsWith value:@"H"];
   result = [queryStart excute];
   
   NSLog(@"result : %@", result);
@@ -100,7 +100,7 @@
 
 - (void)updateCase {
   RHQuery *query = [RHQuery queryWithEntity:@"Person"];
-  [query queryKey:@"name" op:Equal value:@"Kobe"];
+  [query queryKey:@"name" op:RHEqual value:@"Kobe"];
   Person *p = [[query excute] firstObject];
   
   p.birthday = [NSDate date];
@@ -110,7 +110,7 @@
 
 - (void)deleteCase {
   RHQuery *query = [RHQuery queryWithEntity:@"Person"];
-  [query queryKey:@"name" op:Equal value:@"hehe"];
+  [query queryKey:@"name" op:RHEqual value:@"hehe"];
   id result = [[query excute] firstObject];
   
   [self.dataAgent deleteObject:result];
