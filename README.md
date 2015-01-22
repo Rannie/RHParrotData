@@ -172,6 +172,7 @@ Reduce memory:
 - [x] Document
 - [ ] Log Util
 - [ ] Swift Version
+- [ ] Complete Example
 - [ ] Base ManagedObject (Serialization)
 
 ###LICENSE
