@@ -121,13 +121,13 @@ static NSString * RHFunctionExpression(RHFunction func) {
   if (op == RHNone) { return; }
   if (op == RHIn) {
     if (![value isKindOfClass:NSArray.class]) {
-      RLog(@"RHQuery: In value should be a list, if only one value, should use 'Equal'.");
+      RLog(@"RHQuery: In value should be a list, if only one value, should use 'RHEqual'.");
       return;
     }
   }
   
   if (self.isCompound) {
-    RLog(@"RHQuery: Query is compound. If want to add a condition, can use 'queryAnd:' method!");
+    RLog(@"RHQuery: Query is compound. If want to add a condition, can use 'AND:' method!");
     return;
   }
   
@@ -195,8 +195,28 @@ static NSString * RHFunctionExpression(RHFunction func) {
 }
 
 #pragma mark - Other
+- (NSFetchRequest *)generateFetchRequest {
+  NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+  
+  NSEntityDescription *entityDes = [NSEntityDescription entityForName:self.entity inManagedObjectContext:RHMainContext];
+  fetchRequest.entity = entityDes;
+  
+  fetchRequest.predicate = self.queryPredicate;
+  fetchRequest.sortDescriptors = self.sortDescriptors;
+  fetchRequest.fetchBatchSize = self.batchSize;
+  fetchRequest.fetchOffset = self.queryOffset;
+  fetchRequest.fetchLimit = self.limitCount;
+  
+  if (self.expressionDescription) {
+    [fetchRequest setPropertiesToFetch:@[self.expressionDescription]];
+    [fetchRequest setResultType:NSDictionaryResultType];
+  }
+  
+  return fetchRequest;
+}
+
 - (NSString *)description {
-  return [NSString stringWithFormat:@"<RHQuery: %p entity: %@>", self, self.entity];
+  return [NSString stringWithFormat:@"<RHQuery: %p entity: %@ predicate: %@>", self, self.entity, self.queryPredicate.predicateFormat];
 }
 
 @end

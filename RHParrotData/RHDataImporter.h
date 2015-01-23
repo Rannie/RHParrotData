@@ -6,7 +6,6 @@
 //  Copyright (c) 2015年 ran. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "RHParrotMacro.h"
 
 typedef void (^RHObjectSerializeHandler)(id oriObj, NSManagedObject *dataObj);

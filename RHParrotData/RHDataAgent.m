@@ -7,6 +7,9 @@
 //
 
 #import "RHDataAgent.h"
+#import "RHQuery.h"
+#import "RHDatabaseManager.h"
+#import "RHQueryResultController.h"
 
 @interface RHDataAgent ()
 @property (nonatomic, readwrite) RHDatabaseManager  *dbManager;
@@ -82,27 +85,13 @@ static RHDataAgent *instance = nil;
   }];
 }
 
-#pragma mark - Query
+#pragma mark - Excuting
 - (id)excuteQuery:(RHQuery *)query {
   NSParameterAssert(query);
   
   __block id ret = nil;
   
-  NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-  
-  NSEntityDescription *entityDes = [NSEntityDescription entityForName:query.entity inManagedObjectContext:self.dbManager.managedObjectContext];
-  fetchRequest.entity = entityDes;
-  
-  fetchRequest.predicate = query.queryPredicate;
-  fetchRequest.sortDescriptors = query.sortDescriptors;
-  fetchRequest.fetchBatchSize = query.batchSize;
-  fetchRequest.fetchOffset = query.queryOffset;
-  fetchRequest.fetchLimit = query.limitCount;
-  
-  if (query.expressionDescription) {
-    [fetchRequest setPropertiesToFetch:@[query.expressionDescription]];
-    [fetchRequest setResultType:NSDictionaryResultType];
-  }
+  NSFetchRequest *fetchRequest = [query generateFetchRequest];
   
   [self.dbManager queryWithRequest:fetchRequest success:^(NSArray *result) {
     if (query.expressionDescription == nil) {
@@ -118,6 +107,14 @@ static RHDataAgent *instance = nil;
   return ret;
 }
 
+- (void)excuteQueryWithController:(RHQueryResultController *)controller {
+  NSError *error = nil;
+  if (![controller performFetch:&error]) {
+    [self RHLogging:[NSString stringWithFormat:@"RHDataAgent: QueryResultController query failed! error(%@)", error.localizedDescription]];
+  }
+}
+
+#pragma mark - Cache
 - (void)cachedQuery:(RHQuery *)query withKey:(NSString *)queryKey {
   [self.queryCache setObject:query forKey:queryKey];
 }

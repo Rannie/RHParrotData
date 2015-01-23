@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "RHParrotMacro.h"
 
-
 typedef NS_ENUM(NSInteger, RHOperator) {
   RHNone = 0,
   // ==
@@ -164,6 +163,13 @@ typedef NS_ENUM(NSInteger, RHFunction) {
  *  @return new query instance
  */
 - (RHQuery *)NOT;
+
+/**
+ *  generate a fetch request contains all condition.
+ *
+ *  @return the fetch request
+ */
+- (NSFetchRequest *)generateFetchRequest;
 
 /**
  *  Execute the query.
