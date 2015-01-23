@@ -13,5 +13,6 @@
 #import "RHDataAgent.h"
 #import "RHDataImporter.h"
 #import "RHDatabaseManager.h"
+#import "RHQueryResultController.h"
 
 #endif

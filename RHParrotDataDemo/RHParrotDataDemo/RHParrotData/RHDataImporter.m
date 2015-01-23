@@ -8,6 +8,7 @@
 
 #import "RHDataImporter.h"
 #import "RHDataAgent.h"
+#import "RHQuery.h"
 
 @implementation RHDataImporter
 
@@ -24,8 +25,7 @@
   
   __block NSUInteger count = 0;
   
-  NSManagedObjectContext *moc = [RHDataAgent agent].backgroundManagedObjectContext;
-  [moc performBlock:^{
+  [RHBackgroundContext performBlock:^{
     for (id obj in data) {
       NSManagedObject *managedObj;
       if (primaryKey != nil) {
@@ -38,14 +38,14 @@
       if (managedObj) {
         if (updateHandler) updateHandler(obj, managedObj);
       } else {
-        managedObj = [NSEntityDescription insertNewObjectForEntityForName:entity inManagedObjectContext:moc];
+        managedObj = [NSEntityDescription insertNewObjectForEntityForName:entity inManagedObjectContext:RHBackgroundContext];
         if (insertHandler) insertHandler(obj, managedObj);
       }
       
       count++;
       if (count % _batchCount == 0 || count == data.count) {
         NSError *error = nil;
-        [moc save:&error];
+        [RHBackgroundContext save:&error];
         if (error) {
           RLog(@"RHDataImporter: Import data occurs error(%@)!", error.localizedDescription);
         }

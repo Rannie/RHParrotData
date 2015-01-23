@@ -85,7 +85,7 @@ id result = [orQuery excute];
 
 Result will be a list contains "$QUERY_START_CONDITION" or "name == Kobe" objects.
 
-#####Data Import
+####Data Import
 
 Need new a RHDataImportor instance, and use:
 
@@ -98,6 +98,19 @@ Need new a RHDataImportor instance, and use:
 ```
 
 It will import data in a background managedObjectContext and merge changes to the main managedObjectContext.
+
+####NSFetchedResultController
+
+The class 'RHQueryResultController' is a subclass of 'NSFetchedResultController'.
+use it with RHQuery:
+
+```objc
+RHQuery *query = ...
+RHQueryResultController *qrc = [RHQueryResultController queryResultControllerWithQuery:query];
+[qrc performQuery];
+```
+
+or use *queryResultControllerWithQuery:sectionNameKeyPath:catchName:* method to support section or cache.
 
 ####Data Agent
 

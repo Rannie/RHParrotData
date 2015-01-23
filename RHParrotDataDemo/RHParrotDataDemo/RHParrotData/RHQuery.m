@@ -195,6 +195,26 @@ static NSString * RHFunctionExpression(RHFunction func) {
 }
 
 #pragma mark - Other
+- (NSFetchRequest *)generateFetchRequest {
+  NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+  
+  NSEntityDescription *entityDes = [NSEntityDescription entityForName:self.entity inManagedObjectContext:RHMainContext];
+  fetchRequest.entity = entityDes;
+  
+  fetchRequest.predicate = self.queryPredicate;
+  fetchRequest.sortDescriptors = self.sortDescriptors;
+  fetchRequest.fetchBatchSize = self.batchSize;
+  fetchRequest.fetchOffset = self.queryOffset;
+  fetchRequest.fetchLimit = self.limitCount;
+  
+  if (self.expressionDescription) {
+    [fetchRequest setPropertiesToFetch:@[self.expressionDescription]];
+    [fetchRequest setResultType:NSDictionaryResultType];
+  }
+  
+  return fetchRequest;
+}
+
 - (NSString *)description {
   return [NSString stringWithFormat:@"<RHQuery: %p entity: %@ predicate: %@>", self, self.entity, self.queryPredicate.predicateFormat];
 }

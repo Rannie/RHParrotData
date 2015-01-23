@@ -21,6 +21,7 @@
 		4D90F6891A6E4B8900471EDE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D90F6871A6E4B8900471EDE /* Model.xcdatamodeld */; };
 		4D90F68C1A6E4C7F00471EDE /* Brand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D90F68B1A6E4C7F00471EDE /* Brand.m */; };
 		4D90F68F1A6E4C7F00471EDE /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D90F68E1A6E4C7F00471EDE /* Person.m */; };
+		4DC8C5701A7287E900783898 /* RHQueryResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8C56F1A7287E900783898 /* RHQueryResultController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		4D90F68B1A6E4C7F00471EDE /* Brand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Brand.m; sourceTree = "<group>"; };
 		4D90F68D1A6E4C7F00471EDE /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		4D90F68E1A6E4C7F00471EDE /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		4DC8C56E1A7287E900783898 /* RHQueryResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHQueryResultController.h; sourceTree = "<group>"; };
+		4DC8C56F1A7287E900783898 /* RHQueryResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHQueryResultController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,8 @@
 				4D25F8B91A6A987700866345 /* RHDataImporter.m */,
 				4D865D141A6D3AFB005FA54C /* RHDatabaseManager.h */,
 				4D865D151A6D3AFB005FA54C /* RHDatabaseManager.m */,
+				4DC8C56E1A7287E900783898 /* RHQueryResultController.h */,
+				4DC8C56F1A7287E900783898 /* RHQueryResultController.m */,
 			);
 			path = RHParrotData;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 				4D25F8B41A6A982B00866345 /* RHQuery.m in Sources */,
 				4D90F68F1A6E4C7F00471EDE /* Person.m in Sources */,
 				4D25F8941A6A97E900866345 /* ViewController.m in Sources */,
+				4DC8C5701A7287E900783898 /* RHQueryResultController.m in Sources */,
 				4D25F8911A6A97E900866345 /* AppDelegate.m in Sources */,
 				4D90F6891A6E4B8900471EDE /* Model.xcdatamodeld in Sources */,
 				4D25F8BA1A6A987700866345 /* RHDataImporter.m in Sources */,

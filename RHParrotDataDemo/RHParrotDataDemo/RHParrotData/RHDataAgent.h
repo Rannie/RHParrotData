@@ -6,9 +6,14 @@
 //  Copyright (c) 2015年 ran. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "RHQuery.h"
-#import "RHDatabaseManager.h"
+#import "RHParrotMacro.h"
+
+@class RHQuery;
+@class RHDatabaseManager;
+@class RHQueryResultController;
+
+#define RHMainContext ([RHDataAgent agent].mainManagedObjectContext)
+#define RHBackgroundContext ([RHDataAgent agent].backgroundManagedObjectContext)
 
 @interface RHDataAgent : NSObject
 
@@ -74,6 +79,13 @@
  *  @return query result
  */
 - (id)excuteQuery:(RHQuery *)query;
+
+/**
+ *  Drive a subclass of 'NSFetchResultController' instance to perfom fetch.
+ *
+ *  @param controller query result controller
+ */
+- (void)excuteQueryWithController:(RHQueryResultController *)controller;
 
 /**
  *  Cached a query by a string identifier.

@@ -28,7 +28,8 @@
 //  [self deleteCase];
 //  [self updateCase];
 //  [self queryCase];
-  [self importCase];
+//  [self importCase];
+//  [self fetchResultControllerCase];
   
   return YES;
 }
@@ -79,6 +80,14 @@
   result = [orQuery excute];
   
   NSLog(@"result : %@", result);
+}
+
+- (void)fetchResultControllerCase {
+  RHQuery *query = [RHQuery queryWithEntity:@"Person"];
+  [query queryKey:@"name" op:RHEqual value:@"Kobe"];
+  
+  RHQueryResultController *qrc = [RHQueryResultController queryResultControllerWithQuery:query];
+  [qrc performQuery];
 }
 
 - (void)importCase {
