@@ -11,6 +11,14 @@ CoreData stack management and quick query language library.
 
 ####Install
 
+Use CocoaPods
+
+touch a Podfile and add:
+	
+	pod 'RHParrotData'
+
+Or clone this repository
+
 Drag "RHParrotData" folder into your project, and import "RHParrotData.h".
 
 ####Setup Database
@@ -168,7 +176,7 @@ Reduce memory:
 
 ###TODO
 ---
-- [ ] Podspec File
+- [x] Podspec File
 - [x] Document
 - [ ] NSFetchResultController
 - [ ] Log Util
