@@ -101,8 +101,8 @@ It will import data in a background managedObjectContext and merge changes to th
 
 ####NSFetchedResultController
 
-The class 'RHQueryResultController' is a subclass of 'NSFetchedResultController'.
-use it with RHQuery:
+The class 'RHQueryResultController' is a subclass of 'NSFetchedResultController'. <br>
+Use it with RHQuery:
 
 ```objc
 RHQuery *query = ...
@@ -110,7 +110,7 @@ RHQueryResultController *qrc = [RHQueryResultController queryResultControllerWit
 [qrc performQuery];
 ```
 
-or use *queryResultControllerWithQuery:sectionNameKeyPath:catchName:* method to support section or cache.
+Or use *queryResultControllerWithQuery:sectionNameKeyPath:catchName:* method to support section or cache.
 
 ####Data Agent
 
