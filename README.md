@@ -176,15 +176,15 @@ Reduce memory:
 
 ###TODO
 ---
-- [x] Podspec File
-- [x] Document
-- [ ] NSFetchResultController
-- [ ] Log Util
-- [ ] Swift Version
-- [ ] Test
-- [ ] Complete Example
-- [ ] FMDB Version
-- [ ] Base ManagedObject (Serialization)
+~~Podspec File~~ <br>
+~~Document~~ <br>
+NSFetchResultController <br>
+Log Util <br>
+Swift Version <br>
+Test <br>
+Complete Example <br>
+FMDB Version <br>
+Base ManagedObject (Serialization) <br>
 
 ###LICENSE
 ---
