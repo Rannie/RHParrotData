@@ -191,7 +191,7 @@ Reduce memory:
 ---
 ~~Podspec File~~ <br>
 ~~Document~~ <br>
-NSFetchResultController <br>
+~~NSFetchResultController~~ <br>
 Log Util <br>
 Swift Version <br>
 Test <br>
