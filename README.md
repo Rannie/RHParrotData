@@ -1,7 +1,7 @@
 # RHParrotData
 
-![License](https://img.shields.io/cocoapods/l/TWPhotoPicker.svg)
-![Platform](https://img.shields.io/cocoapods/p/TWPhotoPicker.svg)
+[![Platform](https://cocoapod-badges.herokuapp.com/p/RHParrotData/badge.png)](http://cocoadocs.org/docsets/RHParrotData)
+[![Version](https://cocoapod-badges.herokuapp.com/v/RHParrotData/badge.png)](http://cocoadocs.org/docsets/RHParrotData)
 
 CoreData stack management and quick query language library. 
 
