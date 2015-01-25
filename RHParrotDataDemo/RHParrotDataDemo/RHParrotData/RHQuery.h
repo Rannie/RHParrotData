@@ -120,7 +120,7 @@ typedef NS_ENUM(NSInteger, RHFunction) {
  *  @param key      managed object's property keypath
  *  @param function function to caculate. functions see enum 'RHFunction'
  */
-- (void)queryKey:(NSString *)key withFunction:(RHFunction)function;
+- (void)queryKey:(NSString *)key function:(RHFunction)function;
 
 /**
  *  Query with sort result.

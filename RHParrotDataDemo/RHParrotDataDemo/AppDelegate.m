@@ -59,13 +59,13 @@
   }];
   
   RHQuery *queryAverageAge = [query same];
-  [queryAverageAge queryKey:@"age" withFunction:RHAverage];
+  [queryAverageAge queryKey:@"age" function:RHAverage];
   result = [queryAverageAge excute];
   
   NSLog(@"result : %@", result);
   
   RHQuery *queryMin = [query same];
-  [queryMin queryKey:@"age" withFunction:RHMin];
+  [queryMin queryKey:@"age" function:RHMin];
   result = [queryMin excute];
   
   NSLog(@"result : %@", result);

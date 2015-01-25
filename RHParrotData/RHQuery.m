@@ -137,7 +137,7 @@ static NSString * RHFunctionExpression(RHFunction func) {
   self.queryPredicate = predicate;
 }
 
-- (void)queryKey:(NSString *)key withFunction:(RHFunction)function {
+- (void)queryKey:(NSString *)key function:(RHFunction)function {
   NSParameterAssert(key);
   
   NSExpression *keyPathExpression = [NSExpression expressionForKeyPath:key];

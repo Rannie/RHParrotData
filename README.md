@@ -59,7 +59,7 @@ Age will sort descending.
 
 ```objc
 RHQuery *queryAverageAge = [query same];
-[queryAverageAge queryKey:@"age" withFunction:RHAverage];
+[queryAverageAge queryKey:@"age" function:RHAverage];
 id result = [queryAverageAge excute];
 ```
 
@@ -110,7 +110,7 @@ RHQueryResultController *qrc = [RHQueryResultController queryResultControllerWit
 [qrc performQuery];
 ```
 
-Or use *queryResultControllerWithQuery:sectionNameKeyPath:catchName:* method to support section or cache.
+Or use *queryResultControllerWithQuery:sectionNameKeyPath:cacheName:* method to support section or cache.
 
 ####Data Agent
 
