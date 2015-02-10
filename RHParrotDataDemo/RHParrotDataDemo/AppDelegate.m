@@ -47,37 +47,37 @@
   
   RHQuery *query = [RHQuery queryWithEntity:@"Person"];
   [query queryKey:@"name" op:RHEqual value:@"Kobe"];
-  result = [query excute];
+  result = [query execute];
   
   NSLog(@"result : %@", result);
   
   RHQuery *sortQuery = [RHQuery queryWithEntity:@"Person"];
   [sortQuery sort:@"age" ascending:NO];
-  result = [sortQuery excute];
+  result = [sortQuery execute];
   [result enumerateObjectsUsingBlock:^(Person *obj, NSUInteger idx, BOOL *stop) {
     NSLog(@"obj age : %@", obj.age);
   }];
   
   RHQuery *queryAverageAge = [query same];
   [queryAverageAge queryKey:@"age" function:RHAverage];
-  result = [queryAverageAge excute];
+  result = [queryAverageAge execute];
   
   NSLog(@"result : %@", result);
   
   RHQuery *queryMin = [query same];
   [queryMin queryKey:@"age" function:RHMin];
-  result = [queryMin excute];
+  result = [queryMin execute];
   
   NSLog(@"result : %@", result);
   
   RHQuery *queryStart = [query same];
   [queryStart queryKey:@"name" op:RHBeginsWith value:@"H"];
-  result = [queryStart excute];
+  result = [queryStart execute];
   
   NSLog(@"result : %@", result);
   
   RHQuery *orQuery = [queryStart OR:query];
-  result = [orQuery excute];
+  result = [orQuery execute];
   
   NSLog(@"result : %@", result);
 }
@@ -110,7 +110,7 @@
 - (void)updateCase {
   RHQuery *query = [RHQuery queryWithEntity:@"Person"];
   [query queryKey:@"name" op:RHEqual value:@"Kobe"];
-  Person *p = [[query excute] firstObject];
+  Person *p = [[query execute] firstObject];
   
   p.birthday = [NSDate date];
   
@@ -120,7 +120,7 @@
 - (void)deleteCase {
   RHQuery *query = [RHQuery queryWithEntity:@"Person"];
   [query queryKey:@"name" op:RHEqual value:@"hehe"];
-  id result = [[query excute] firstObject];
+  id result = [[query execute] firstObject];
   
   [self.dataAgent deleteObject:result];
 }

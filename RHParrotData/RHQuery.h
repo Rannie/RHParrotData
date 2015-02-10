@@ -176,6 +176,6 @@ typedef NS_ENUM(NSInteger, RHFunction) {
  *
  *  @return query result
  */
-- (id)excute;
+- (id)execute;
 
 @end

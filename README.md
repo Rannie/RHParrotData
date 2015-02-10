@@ -5,6 +5,7 @@
 
 CoreData stack management and quick query language library. 
 
+[Swift Version](https://github.com/Rannie/CoreDataParrot)
 
 ###Usage
 ---
@@ -40,7 +41,7 @@ Then u can retrieve the instance of RHDataAgent by class method '*agent*'.
 ```objc
 RHQuery *query = [RHQuery queryWithEntity:@"Person"];
 [query queryKey:@"name" op:RHEqual value:@"Kobe"];
-id result = [query excute];
+id result = [query execute];
 ```
 
 Result will be a name == "Kobe" person array.
@@ -50,7 +51,7 @@ Result will be a name == "Kobe" person array.
 ```objc
 RHQuery *sortQuery = [RHQuery queryWithEntity:@"Person"];
 [sortQuery sort:@"age" ascending:NO];
-id result = [sortQuery excute];
+id result = [sortQuery execute];
 ```
 	
 Age will sort descending.
@@ -60,7 +61,7 @@ Age will sort descending.
 ```objc
 RHQuery *queryAverageAge = [query same];
 [queryAverageAge queryKey:@"age" function:RHAverage];
-id result = [queryAverageAge excute];
+id result = [queryAverageAge execute];
 ```
 
 *same* means query same entity.
@@ -80,7 +81,7 @@ Sample:
 	
 ```objc
 RHQuery *orQuery = [queryStart OR:query];	//"name == Kobe" query above
-id result = [orQuery excute];
+id result = [orQuery execute];
 ```
 
 Result will be a list contains "$QUERY_START_CONDITION" or "name == Kobe" objects.
@@ -134,10 +135,10 @@ Delete object or objects:
 [[RHDataAgent agent] deleteObjects:(NSArray *)objsToDelete];
 ```
 	
-Excute RHQuery:
+execute RHQuery:
 
 ```objc
-[[RHDataAgent agent] excuteQuery:query];
+[[RHDataAgent agent] executeQuery:query];
 ```
 
 Undo management:

@@ -72,20 +72,20 @@
 - (void)deleteObjects:(NSArray *)objects;
 
 /**
- *  Excute a query. also can use RHQuery method '- excute'.
+ *  Execute a query. also can use RHQuery method '- execute'.
  *
  *  @param query RHQuery instance
  *
  *  @return query result
  */
-- (id)excuteQuery:(RHQuery *)query;
+- (id)executeQuery:(RHQuery *)query;
 
 /**
  *  Drive a subclass of 'NSFetchResultController' instance to perfom fetch.
  *
  *  @param controller query result controller
  */
-- (void)excuteQueryWithController:(RHQueryResultController *)controller;
+- (void)executeQueryWithController:(RHQueryResultController *)controller;
 
 /**
  *  Cached a query by a string identifier.

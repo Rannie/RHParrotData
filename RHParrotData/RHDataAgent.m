@@ -86,7 +86,7 @@ static RHDataAgent *instance = nil;
 }
 
 #pragma mark - Excuting
-- (id)excuteQuery:(RHQuery *)query {
+- (id)executeQuery:(RHQuery *)query {
   NSParameterAssert(query);
   
   __block id ret = nil;
@@ -101,13 +101,13 @@ static RHDataAgent *instance = nil;
       ret = dict[query.expressionDescription.name];
     }
   } failure:^(NSError *error) {
-    [self RHLogging:[NSString stringWithFormat:@"RHDataAgent: Query(%@) excute failed! error(%@)", query, error.localizedDescription]];
+    [self RHLogging:[NSString stringWithFormat:@"RHDataAgent: Query(%@) execute failed! error(%@)", query, error.localizedDescription]];
   }];
   
   return ret;
 }
 
-- (void)excuteQueryWithController:(RHQueryResultController *)controller {
+- (void)executeQueryWithController:(RHQueryResultController *)controller {
   NSError *error = nil;
   if (![controller performFetch:&error]) {
     [self RHLogging:[NSString stringWithFormat:@"RHDataAgent: QueryResultController query failed! error(%@)", error.localizedDescription]];

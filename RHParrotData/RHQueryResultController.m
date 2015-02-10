@@ -25,7 +25,7 @@
 }
 
 - (void)performQuery {
-  [[RHDataAgent agent] excuteQueryWithController:self];
+  [[RHDataAgent agent] executeQueryWithController:self];
 }
 
 @end

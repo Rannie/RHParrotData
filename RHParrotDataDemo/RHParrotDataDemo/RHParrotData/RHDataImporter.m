@@ -32,7 +32,7 @@
         id primaryValue = [obj valueForKey:primaryKey];
         RHQuery *query = [RHQuery queryWithEntity:entity];
         [query queryKey:primaryKey op:RHEqual value:primaryValue];
-        managedObj = [[query excute] firstObject];
+        managedObj = [[query execute] firstObject];
       }
       
       if (managedObj) {
@@ -49,7 +49,7 @@
         if (error) {
           RLog(@"RHDataImporter: Import data occurs error(%@)!", error.localizedDescription);
         }
-      }
+      } 
     }
   }];
 }

@@ -156,7 +156,7 @@ static NSString * const RHDatabaseManagerDomain = @"RHDatabaseManagerDomain";
   [self saveContextWithSuccess:success failure:failure];
 }
 
-#pragma mark - Query
+#pragma mark - Query
 - (void)queryWithRequest:(NSFetchRequest *)fetchRequest success:(DBQuerySuccessBlock)success failure:(DBOperationFailureBlock)failure {
   NSError *error = nil;
   NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];

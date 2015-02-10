@@ -190,8 +190,8 @@ static NSString * RHFunctionExpression(RHFunction func) {
   [self.sortConditions addObject:sortDes];
 }
 
-- (id)excute {
-  return [[RHDataAgent agent] excuteQuery:self];
+- (id)execute {
+  return [[RHDataAgent agent] executeQuery:self];
 }
 
 #pragma mark - Other
