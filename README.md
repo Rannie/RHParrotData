@@ -194,7 +194,7 @@ Reduce memory:
 ~~Document~~ <br>
 ~~NSFetchResultController~~ <br>
 Log Util <br>
-~~Swift Version ([CoreDataParrot](https://github.com/Rannie/CoreDataParrot)) <br>
+~~Swift Version~~ ([CoreDataParrot](https://github.com/Rannie/CoreDataParrot)) <br>
 Test <br>
 Complete Example <br>
 FMDB Version <br>
