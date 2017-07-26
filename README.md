@@ -7,10 +7,10 @@ CoreData stack management and quick query language library.
 
 [Swift Version](https://github.com/Rannie/CoreDataParrot)
 
-###Usage
+### Usage
 ---
 
-####Install
+#### Install
 
 Use CocoaPods
 
@@ -22,7 +22,7 @@ Or clone this repository
 
 Drag "RHParrotData" folder into your project, and import "RHParrotData.h".
 
-####Setup Database
+#### Setup Database
 
 ```objc
 NSURL *momdURL = [[NSBundle mainBundle] URLForResource:$YOUR_MOMDFILENAME withExtension:@"momd"];
@@ -34,9 +34,9 @@ NSURL *storeURL = [appDocumentsDirectory URLByAppendingPathComponent:$YOUR_DBNAM
 Then u can retrieve the instance of RHDataAgent by class method '*agent*'.
 	  
 	  
-####Query 
+#### Query 
 
-#####Simple Operator Query:
+##### Simple Operator Query:
 
 ```objc
 RHQuery *query = [RHQuery queryWithEntity:@"Person"];
@@ -46,7 +46,7 @@ id result = [query execute];
 
 Result will be a name == "Kobe" person array.
 
-#####Query and Sort:
+##### Query and Sort:
 
 ```objc
 RHQuery *sortQuery = [RHQuery queryWithEntity:@"Person"];
@@ -56,7 +56,7 @@ id result = [sortQuery execute];
 	
 Age will sort descending.
 
-#####Query with Function
+##### Query with Function
 
 ```objc
 RHQuery *queryAverageAge = [query same];
@@ -67,7 +67,7 @@ id result = [queryAverageAge execute];
 *same* means query same entity.
 Result will be the average number about age;
 
-#####Compound Query
+##### Compound Query
 
 **RHQuery** also support compound query.
 
@@ -86,7 +86,7 @@ id result = [orQuery execute];
 
 Result will be a list contains "$QUERY_START_CONDITION" or "name == Kobe" objects.
 
-####Data Import
+#### Data Import
 
 Need new a RHDataImportor instance, and use:
 
@@ -100,7 +100,7 @@ Need new a RHDataImportor instance, and use:
 
 It will import data in a background managedObjectContext and merge changes to the main managedObjectContext.
 
-####NSFetchedResultController
+#### NSFetchedResultController
 
 The class 'RHQueryResultController' is a subclass of 'NSFetchedResultController'. <br>
 Use it with RHQuery:
@@ -113,7 +113,7 @@ RHQueryResultController *qrc = [RHQueryResultController queryResultControllerWit
 
 Or use *queryResultControllerWithQuery:sectionNameKeyPath:cacheName:* method to support section or cache.
 
-####Data Agent
+#### Data Agent
 
 Agent is a singleton. It's Features:
 
@@ -156,7 +156,7 @@ Reduce memory:
 - (void)reduceMemory;
 ```
 	
-###Query Operators
+### Query Operators
 ---
 
 | **Operator Enum**   | **Comparison**   |  **Example**               |
@@ -176,7 +176,7 @@ Reduce memory:
 | RHIn                 | lhs in rhs        | "name IN Ben, Melissa, Nick"|
 
 
-###Query Functions
+### Query Functions
 ---
   
 | **Function Enum** | **Meaning**  |
@@ -188,7 +188,7 @@ Reduce memory:
 | RHCount		    | row count 				|
 
 
-###TODO
+### TODO
 ---
 ~~Podspec File~~ <br>
 ~~Document~~ <br>
@@ -200,7 +200,7 @@ Complete Example <br>
 FMDB Version <br>
 Base ManagedObject (Serialization) <br>
 
-###LICENSE
+### LICENSE
 ---
 
 The MIT License (MIT)
